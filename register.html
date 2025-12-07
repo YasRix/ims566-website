@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Booking Checking System — Register</title>
+  <meta name="description" content="Hotel Booking Checking System — Register" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lieu-paisible-reg">
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-6">
+        <div class="card glass-card">
+          <div class="card-body p-4">
+            <h2 class="card-title mb-3 text-center">Create an account</h2>
+
+            <form id="registerForm" novalidate>
+              <div class="mb-3">
+                <label for="regName" class="form-label">Full name</label>
+                <input id="regName" class="form-control" required>
+                <div class="invalid-feedback">Enter your name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="regUser" class="form-label">Username</label>
+                <input id="regUser" class="form-control" required>
+                <div class="invalid-feedback">Choose a username.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="regPass" class="form-label">Password</label>
+                <input id="regPass" type="password" class="form-control" required>
+                <div class="invalid-feedback">Choose a password.</div>
+              </div>
+
+              <div id="registerSuccess" class="text-success mb-3" style="display:none;"></div>
+              <div id="registerError" class="text-danger mb-3" style="display:none;"></div>
+
+              <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-success">Register</button>
+              </div>
+
+              <div class="text-center">
+                <small class="text-muted">Already have an account? <a href="index.html">Login</a></small>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <footer class="mt-3 text-center text-muted small ">
+          © Lieu Paisible Hotel 2025
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <script src="styles.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

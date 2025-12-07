@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Booking Checking System — Rooms</title>
+  <meta name="description" content="Hotel Booking Checking System — Rooms" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="rooms-bg bg-blur">
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark glass-nav">
+    <div class="container">
+      
+      <a class="navbar-brand d-flex align-items-center gap-2" href="dashboard.html">
+  <img src="images/logo.png" alt="Hotel Logo" height="32" class="me-2">
+  Lieu Paisible Hotel
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="room.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Bookings</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+        <div class="d-flex">
+          <button id="logoutBtn" class="btn btn-outline-light btn-sm">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main Content -->
+  <main class="container my-4">
+    <h3 class="mb-4 text-white">Room Types</h3>
+    <div class="row g-4">
+
+  <!-- Standard Room Card -->
+  <div class="col-12 col-md-6 col-lg-8">
+    <div class="card h-100 transparent-card">
+      <div class="row g-0 align-items-center">
+        <div class="col-6">
+          <img src="images/standard.jpeg" class="img-fluid rounded-start" alt="Standard Room">
+        </div>
+        <div class="col-6">
+          <div class="card-body">
+            <h5 class="card-title">Standard</h5>
+            <p class="card-text">Price: RM 100/night</p>
+            <p class="card-text">Availability: <span id="standardAvailability">—</span></p>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#standardRooms" aria-expanded="false" aria-controls="standardRooms">
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="standardRooms" class="collapse">
+        <div class="card-body p-2">
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Guest</th>
+              </tr>
+            </thead>
+            <tbody id="standardRoomsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deluxe Room Card -->
+  <div class="col-12 col-md-6 col-lg-8">
+    <div class="card h-100 transparent-card">
+      <div class="row g-0 align-items-center">
+        <div class="col-6">
+          <img src="images/deluxe.jpeg" class="img-fluid rounded-start" alt="Deluxe Room">
+        </div>
+        <div class="col-6">
+          <div class="card-body">
+            <h5 class="card-title">Deluxe</h5>
+            <p class="card-text">Price: RM 150/night</p>
+            <p class="card-text">Availability: <span id="deluxeAvailability">—</span></p>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#deluxeRooms" aria-expanded="false" aria-controls="deluxeRooms">
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="deluxeRooms" class="collapse">
+        <div class="card-body p-2">
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Guest</th>
+              </tr>
+            </thead>
+            <tbody id="deluxeRoomsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suite Room Card -->
+  <div class="col-12 col-md-6 col-lg-8">
+    <div class="card h-100 transparent-card">
+      <div class="row g-0 align-items-center">
+        <div class="col-6">
+          <img src="images/suite.jpeg" class="img-fluid rounded-start" alt="Suite Room">
+        </div>
+        <div class="col-6">
+          <div class="card-body">
+            <h5 class="card-title">Suite</h5>
+            <p class="card-text">Price: RM 200/night</p>
+            <p class="card-text">Availability: <span id="suiteAvailability">—</span></p>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#suiteRooms" aria-expanded="false" aria-controls="suiteRooms">
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="suiteRooms" class="collapse">
+        <div class="card-body p-2">
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Guest</th>
+              </tr>
+            </thead>
+            <tbody id="suiteRoomsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Family Room Card -->
+  <div class="col-12 col-md-6 col-lg-8">
+    <div class="card h-100 transparent-card">
+      <div class="row g-0 align-items-center">
+        <div class="col-6">
+          <img src="images/family.jpeg" class="img-fluid rounded-start" alt="Family Room">
+        </div>
+        <div class="col-6">
+          <div class="card-body">
+            <h5 class="card-title">Family</h5>
+            <p class="card-text">Price: RM 250/night</p>
+            <p class="card-text">Availability: <span id="familyAvailability">—</span></p>
+            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#familyRooms" aria-expanded="false" aria-controls="familyRooms">
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="familyRooms" class="collapse">
+        <div class="card-body p-2">
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Guest</th>
+              </tr>
+            </thead>
+            <tbody id="familyRoomsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3">
+    <div class="container text-center small text-muted">
+      © Lieu Paisible Hotel 2025
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

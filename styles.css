@@ -1,0 +1,337 @@
+/* Page background */
+
+.card-title {
+  font-weight: 600;
+}
+
+/* Small helper for status badges */
+.badge-status {
+  font-size: 0.78rem;
+  padding: 0.35em 0.55em;
+}
+
+/* Make tables slightly denser on small screens */
+.table-sm td, .table-sm th {
+  padding: 0.45rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+}
+
+/* Minor responsive tweak for dashboard cards */
+@media (max-width: 576px) {
+  .card .card-body h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Full screen background image */
+.lieu-paisible-bg {
+    background: url('images/login.jpeg') center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Full screen background image */
+.lieu-paisible-reg {
+    background: url('images/register.jpeg') center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Frosted Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.12); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    border: 1px solid rgba(220, 217, 182, 0.212);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+/* Ensure text inside card is readable */
+.glass-card .card-body h2,
+.glass-card .card-body p,
+.glass-card label,
+.glass-card .form-control::placeholder {
+  color: rgba(255,255,255,0.95);
+}
+/* Make inputs clean & visible */
+.glass-card .form-control {
+    background: rgba(238, 227, 213, 0.373);
+    border: none;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnim 1.5s ease forwards;
+}
+
+@keyframes fadeInAnim {
+    to { opacity: 1; }
+}
+
+/* Floating effect (up/down) */
+.float {
+    animation: floatAnim 4s ease-in-out infinite;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* Glow animation (lamp effect) */
+.lamp-glow {
+    animation: glowAnim 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnim {
+    from { filter: brightness(90%); }
+    to   { filter: brightness(120%); }
+}
+
+.glow-success {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+.glow-danger {
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.6);
+}
+
+.glow-secondary {
+    box-shadow: 0 0 10px rgba(180, 180, 180, 0.6);
+}
+
+/* 🔥 BOOKING STATUS GLOW STYLES */
+
+/* Available / Reserved → Green glow */
+.status-available {
+    background-color: #28a745 !important;
+    color: #fff !important;
+    box-shadow: 0 0 8px #28a745, 0 0 12px #28a745 inset;
+    border: 1px solid #28a745 !important;
+}
+
+/* Occupied / Checked-in → Red glow */
+.status-occupied {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    box-shadow: 0 0 8px #dc3545, 0 0 12px #dc3545 inset;
+    border: 1px solid #dc3545 !important;
+}
+
+/* Maintenance / Checked-out → Yellow/Amber glow */
+.status-maintenance {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+    box-shadow: 0 0 8px #ffc107, 0 0 12px #ffc107 inset;
+    border: 1px solid #ffc107 !important;
+}
+
+/* DASHBOARD background */
+.dashboard-bg {
+    background: url('images/dashboard.jpeg') center center/cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* ROOMS background */
+.rooms-bg {
+    background: url('images/rooms.jpeg') center center/cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* BOOKINGS background */
+.bookings-bg {
+    background: url('images/booking.jpeg') center center/cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* ABOUT background */
+.about-bg {
+    background: url('images/about.jfif') center center/cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+ .transparent-card {
+    background: rgba(255, 255, 255, 0.412);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.bg-blur {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.transparent-table td,
+.transparent-table th {
+    background: rgba(255, 255, 255, 0) !important; /* adjust 0.1 - 0.5 */
+    backdrop-filter: blur(10px); /* optional */
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  h5.card-title {
+    font-size: 1.1rem;
+  }
+
+  canvas {
+    max-height: 260px;
+  }
+}
+
+#recentBookingsTable tbody tr:hover {
+  background-color: rgba(23, 167, 73, 0.147);
+}
+
+.card.transparent-card {
+  border-left: 4px solid #36a3eb8d; /* match room type or metric color */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/*---------------------------BAHAGIAN NAVBAR*/
+
+/* Strong, high-specificity frosted navbar */
+nav.navbar.glass-nav {
+  background-color: rgba(255,255,255,0.10) !important; /* translucency */
+  background-image: none !important;
+  backdrop-filter: blur(12px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(120%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.18) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.22) !important;
+  color: #fff !important;
+  z-index: 1030; /* make sure it sits above page content */
+}
+
+/* Force the link/button colors */
+nav.navbar.glass-nav .navbar-brand,
+nav.navbar.glass-nav .nav-link,
+nav.navbar.glass-nav .navbar-toggler,
+nav.navbar.glass-nav .btn {
+  color: #ffffff !important;
+}
+
+/* Toggler border + icon */
+nav.navbar.glass-nav .navbar-toggler {
+  border-color: rgba(255,255,255,0.55) !important;
+}
+nav.navbar.glass-nav .navbar-toggler-icon {
+  filter: invert(100%) !important; /* make default icon visible on translucent bg */
+}
+
+/* Ensure collapsed menu background is also translucent on mobile */
+nav.navbar.glass-nav .navbar-collapse {
+  background-color: rgba(255,255,255,0.04) !important;
+}
+
+/* FIX the lighter white bar behind Dashboard → Logout */
+nav.navbar.glass-nav .navbar-collapse {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* If you use .table-light or other light elements inside navbar, ensure contrast */
+nav.navbar.glass-nav .dropdown-menu,
+nav.navbar.glass-nav .dropdown-item {
+  background: rgba(0,0,0,0.45) !important;
+  color: #fff !important;
+}
+
+/*-----------------------------------BAHAGIAN LOGOUT BUTTON */
+
+/* Logout button hover: turn grey */
+nav.navbar.glass-nav .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.35) !important; /* grey-ish glow */
+    color: #000 !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/*-------------------------------------BAHAGIAN GLOWING HOVER*/
+
+/* Glow effect on hover for nav-brand + nav-links (slower fade) */
+nav.navbar.glass-nav .navbar-brand,
+nav.navbar.glass-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease; /* slower fade in/out */
+}
+
+nav.navbar.glass-nav .navbar-brand:hover,
+nav.navbar.glass-nav .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Glow halo behind each item — slower fade */
+nav.navbar.glass-nav .navbar-brand::after,
+nav.navbar.glass-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 12px rgba(255,255,255,0);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease; /* slow fade animation */
+}
+
+nav.navbar.glass-nav .navbar-brand:hover::after,
+nav.navbar.glass-nav .nav-link:hover::after {
+    background: rgba(37, 36, 36, 0.2);
+    box-shadow: 0 0 12px rgba(255,255,255,0.40);
+    opacity: 1;
+}
+
+/* --------------------------------------- */
+/* TESTIMONIAL / CUSTOMER WORDS SECTION    */
+/* --------------------------------------- */
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 4px solid #36a3eb; /* hotel blue accent */
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+/* Customer name inline (after sentence) */
+.testimonial strong {
+    display: inline;
+    margin-left: 6px;
+    font-weight: 600;
+    color: #ffffff;
+    font-style: normal;
+}
+
+
+/* Center and limit width of about page cards */
+.section-card {
+    max-width: 850px;      /* adjust width as you prefer */
+    margin-left: auto;
+    margin-right: auto;
+}
